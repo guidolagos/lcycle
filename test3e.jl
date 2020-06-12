@@ -175,10 +175,9 @@ model = Model(
 @variables(model, begin
 		0 <= c <= cmaxk
 		Xp[1:Nsamples]
-		θ[1:Nsamples]
+		θ[1:Nsamples] <= θmax
 		α
 		ψ
-		θ .<= θmax
 	end)
 
 if tk <= R
